@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      roboto: ["Roboto", "sans-serif"],
+      Merriweather: ["Merriweather", "serif"],
+      shine: ["Noto Sans JP", "sans-serif"]
+    },
   },
   plugins: [],
 }
