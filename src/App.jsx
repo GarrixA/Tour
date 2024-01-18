@@ -1,16 +1,17 @@
-import './index.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./index.scss";
+import Layout from "./Components/reusable/Layout";
+import Home from "./Components/Home/Home";
 export default function App() {
   return (
     <>
-    <h1 className="text-3xl font-bold underline font-Merriweather">
-      Hello world!
-    </h1>
-    <h1 className="text-3xl font-bold underline font-roboto">
-      Hello world!345
-    </h1>
-    <h1 className="text-3xl font-bold underline font-shine">
-      Hello world!345
-    </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Home/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
